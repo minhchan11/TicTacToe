@@ -39,7 +39,7 @@ function board(row,col,dia) {
         player += 1;
     } else {
       $(this).val("2");
-      $(this).addClass("green");
+      $(this).addClass("blue");
       $(this).prop("disabled",true);
       player -=1;
     }
