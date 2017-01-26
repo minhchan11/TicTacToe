@@ -12,14 +12,19 @@ function board(row,col,dia) {
     for (var i = 0; i < 3 ; i++) {
       if( this.row[i] === 1) {
         alert ("Player X wins!");
+        return false;
       } else if (this.row[i] === 8) {
         alert("Player O wins");
+        return false;
       } else if (this.col[i] === 1) {
         alert("Player X wins");
+        return false;
       } else if (this.col[i] === 8) {
         alert("Player O wins");
+        return false;
       } else if (this.dia[i] === 1) {
         alert("Player X wins");
+        return false;
       } else if (this.dia[i] === 8) {
         alert("Player 0 wins");
       } else {
