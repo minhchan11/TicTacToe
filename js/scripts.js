@@ -1,3 +1,5 @@
+//Defining global variable
+var turn = 0;
 //Business Logic
 //ORIGINAL CONSTRUCTOR BOARD
 function board(row,col,dia) {
@@ -19,6 +21,9 @@ function board(row,col,dia) {
         alert("Player X wins");
       } else if (this.dia[i] === 8) {
         alert("Player 0 wins");
+      } else if (turn === 9) {
+        alert("This is a tie game");
+        return false;
       }
     };
   };
@@ -26,6 +31,7 @@ function board(row,col,dia) {
   //User Logic
   $(document).ready(function() {
     $(".table").change(function() {
+      turn+=
       //TAKE VALUE
       box1 = parseInt($("#topLeft").val());
       box2 = parseInt($("#topMiddle").val());
@@ -41,7 +47,7 @@ function board(row,col,dia) {
       var colScore = [(box1*box4*box7),(box2*box5*box8),(box3*box6*box9)];
       var diaScore = [(box1*box5*box9),(box3*box5*box7)];
       var boardScore = new board(rowScore,colScore,diaScore);
-      console.log(boardScore);
+      console.log(turn);
       boardScore.check();
     });
   });
