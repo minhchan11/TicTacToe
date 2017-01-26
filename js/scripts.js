@@ -22,9 +22,11 @@ function board(row,col,dia) {
         alert("Player X wins");
       } else if (this.dia[i] === 8) {
         alert("Player 0 wins");
-      } else if ( turn === 9) {
-        alert("This is a tie game");
-        return false;
+      } else {
+        if (turn === 9) {
+          alert("This is a tie game");
+          return false;
+        }
       }
     };
   };
