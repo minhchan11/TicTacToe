@@ -18,6 +18,15 @@ select {
 input {
   width: 100px;
   height: 100px;
-  font-size: 50px;
+  text-indent: -999px;
 }
 
+.red {
+  background-image: url(../img/player1.png);
+  background-size: cover;
+}
+
+.green {
+  background-image: url(../img/player2.png);
+  background-size: cover;
+}
