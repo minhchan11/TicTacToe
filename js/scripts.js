@@ -27,11 +27,9 @@ function board(row,col,dia) {
         return false;
       } else if (this.dia[i] === 8) {
         alert("Player 0 wins");
-      } else {
-        if (turn === 9) {
+      } else if (turn === 9) {
           alert("This is a tie game");
           break;
-        }
       }
     };
   };
